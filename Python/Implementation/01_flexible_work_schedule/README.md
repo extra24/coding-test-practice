@@ -16,11 +16,16 @@
 
 직원 n명이 설정한 출근 희망 시각을 담은 1차원 정수 배열 schedules, 직원들이 일주일 동안 출근한 시각을 담은 2차원 정수 배열 timelogs, 이벤트를 시작한 요일을 의미하는 정수 startday가 매개변수로 주어집니다. 이때 상품을 받을 직원의 수를 return 하도록 solution 함수를 완성해주세요.
 
-## 문제 접근 방식
+## 문제 풀이
 
-### 코드 설명
+### 문제 접근 방식
 
-#### **첫 번째 풀이 (오답)**
+1. 직원별 출근 희망 시간을 기준으로 **+10분**을 더해 도착 가능 시간 계산
+2. 주어진 출근 기록을 확인하면서, **월요일~금요일(주말 제외)** 동안 출근 조건을 충족하는지 체크
+3. 조건을 충족하는 직원 수 반환
+4. **50분 이후**에 설정된 출근 희망 시간은 시와 분을 고려하여서 다른 계산 방법 필요
+
+### 첫 번째 풀이 (오답)
 
 ```python
 def solution(schedules, timelogs, startday):
@@ -44,7 +49,7 @@ def solution(schedules, timelogs, startday):
 
 - **오류 원인:** `schedules[i] + 10`으로 10분을 더하는 방식이 잘못되어 50분이 넘어가는 시간대는 제대로 처리하지 못함
 
-#### **두 번째 풀이 (정답)**
+### 두 번째 풀이 (정답)
 
 ```python
 def solution(schedules, timelogs, startday):
@@ -66,7 +71,7 @@ def solution(schedules, timelogs, startday):
     return answer
 ```
 
-- **수정 사항:**
+- **수정 사항**
   - `schedules[i] % 100 < 50`을 확인하여, 분 단위가 50 이상일 경우 시간을 올바르게 조정
 
 ## 개선할 점
