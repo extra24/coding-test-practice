@@ -1,4 +1,4 @@
-# Flexibgle Work Schedule - 유연근무제
+# Flexible Work Schedule - 유연근무제
 
 ## 문제 정보
 
