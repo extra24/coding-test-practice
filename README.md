@@ -14,7 +14,7 @@ coding-test-practice/
 │       ├── 01_Flexible_Work_Schedule
 │       │   ├── README.md       # 유연근무제.md
 │       │   └── solution.py     # 유연근무제.py
-│       ├── 02_Minumum_Sum
+│       ├── 02_Minimum_Sum
 │       │   ├── README.md       # 최솟값 만들기.md
 │       │   └── solution.py     # 최솟값 만들기.py
 │       └── 03_Jaden_Case
